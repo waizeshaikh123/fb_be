@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #3A3B3C;
+}
+::-webkit-scrollbar-thumb{
+    background: #18191A;
+    border-radius:5px;
+}
+// header
+nav{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #38393b;
+    background: #242526;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    .logo{
+        width: 45px;
+        height: 45px;
+        background: url(https://logowik.com/content/uploads/images/facebook-new-2023-icon9594.logowik.com.webp);
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    input{
+        position: relative;
+        left: 100%;
+        color: #fff;
+        background: #3A3B3C;
+        border: 1px solid rgb(53, 48, 48);
+    }
+    .search{
+        position: fixed;
+        left: 90px;
+        top: 17px;
+        font-size: 1.2rem;
+        display: block;
+        color: #ADB0B5;
+    }
+    .home{
+        padding: 8px 0;
+        & a{
+            position: relative;
+            color: #ADB0B5;
+            margin: 0 1.5rem;
+        }
+        & a:hover{
+            background: #3A3B3C;
+        }
+        & a::after{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            top: 120%;
+            left: 0;
+            transition: all ease-in 0.3s;
+        }
+        & a:hover::after{
+            width: 100%;
+            background: blue;
+            display: none;
+            transition: all ease 0.3s;
+        }
+    }
+    .menu{
+        display: block;
+        padding-top:10px;
+        position: relative;
+        & a{
+            color: #fff;
+            background-color: #3A3B3C;
+            transition: all ease 0.3s;
+        }
+        & a:hover{
+            background: #4E4F50;
+            
+        }
+        .account{
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .account img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+// ############# main
+#main{
+    position: relative;
+    width: 100%;
+    height:auto;
+    background: #18191A;
+    padding: 3rem 0;
+    .left-bar-main{
+        height: 100vh;
+        position: fixed;
+    }
+    .left-bar-main:hover{
+        overflow-y: scroll;
+    }
+    .right-bar-main{
+        position: fixed;
+        .group-main{
+            cursor: pointer;
+        }
+        .card{
+            display: none;
+            height: 100vh;
+            position: relative;
+            top: 10px;
+            right: 76px;
+            i{
+                cursor: pointer;
+            }
+            .end-p{
+                font-size: 0.9em;
+            }
+            .end-to-end{
+                background: #303031;
+                border: 1px solid #303031;
+            }
+            .circle{
+                transition: all ease 0.3s;
+                cursor: pointer;
+                background: #fff;
+            }
+        }
+    }
+    .left-bar a img{
+        object-fit: cover;
+    }
+    .left-bar a{
+        color: #fff;
+    }
+    .left-bar a:hover{
+        color: #4E4F50;
+
+    }
+    & i{
+        color: #ADB0B5;
+    }
+    .privacy a{
+        color: #ADB0B5;
+        text-decoration: none;
+        font-size: 13px;
+        transition: all ease 0.3s;
+    }
+    .privacy a:hover{
+        text-decoration: underline;
+    }
+    .main-center{
+        width:100%;
+        height: auto;
+        display: block;
+    }
+    .center-bar a{
+        transition: all ease-in 0.2s;
+    }
+    .center-bar a:hover{
+        background: #3A3B3C;
+    }
+    .center-bar a .center-plus{
+        background: #364b62;
+    }
+    .whats-onmind{
+        position: relative;
+        cursor: pointer;
+        width: 79%;
+        min-height: 120px;
+        background: #fff;
+        .main-whats-onmind .account-2 img{
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        input{
+            cursor: pointer;
+            background: #3A3B3C;
+            color: wheat;
+        }
+    }
+    .video a{
+        color: #ADB0B5;
+    }
+    .main-card{
+        position: relative;
+        a{
+            text-decoration: none;
+            font-size: 0.8em;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        span a:nth-child(1){
+            font-weight: 600;
+            color: white;
+        }
+        span a:nth-child(2){
+            font-weight: 500;
+        }
+        span a:nth-child(4){
+            font-size: 0.8em;
+            color: #ADB0B5;
+        }
+        .emojis span{
+            margin: 0 -5px;
+            font-size: 1.3rem;
+        }
+        .last-icon a{
+            text-decoration: none;
+            color: wheat;
+        }
+    }
+}
